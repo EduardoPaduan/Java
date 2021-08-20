@@ -17,7 +17,11 @@ public class ProdutoFracionado extends Produto implements IProduto{
     }
 
     public void vender(double qtd){
-        this.quantidadeEstoque = this.quantidadeEstoque - qtd;
+        if (this.quantidadeEstoque - qtd >=0){
+            this.quantidadeEstoque = this.quantidadeEstoque-qtd;
+        }
+        else
+            System.out.println("Sem estoque para essa venda");
     }
 
     public double getQuantidadeEstoque() {

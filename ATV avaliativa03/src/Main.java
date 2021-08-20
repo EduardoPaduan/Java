@@ -32,10 +32,14 @@ public class Main {
 
         Collections.sort(lista);
 
+        System.out.println("\nProdutos ordenados por codigo: ");
+
         for (Produto aux: lista){
+            System.out.println("\n"+aux.toString());
             totalMercado = totalMercado + aux.calcularValorEmEstoque();
         }
-         System.out.printf("\nValor do estoque total do mercado é: R$ %s", df.format(totalMercado));
+
+         System.out.printf("\nValor do estoque total do mercado é: R$ %s\n", df.format(totalMercado));
 
     }
 }
