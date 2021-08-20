@@ -16,7 +16,7 @@ public class Main {
         lista.add(p2);
         Produto p3 = new PodutoUnitario(3699,"Bolacha",3.50,100);
         lista.add(p3);
-        Produto p4 = new ProdutoFracionado(1888,"Laranja",5.25,100);
+        Produto p4 = new ProdutoFracionado(188,"Laranja",5.25,100);
         lista.add(p4);
         Produto p5 = new ProdutoFracionado(999,"Maçã",2.75,100);
         lista.add(p5);
@@ -30,12 +30,12 @@ public class Main {
         System.out.println("\nTotal do estoque: \n"+p5.toString()+"\nValor total: "+p5.calcularValorEmEstoque());
         System.out.println("\nTotal do estoque: \n"+p6.toString()+"\nValor total: "+p6.calcularValorEmEstoque());
 
+        Collections.sort(lista);
+
         for (Produto aux: lista){
             totalMercado = totalMercado + aux.calcularValorEmEstoque();
         }
          System.out.printf("\nValor do estoque total do mercado é: R$ %s", df.format(totalMercado));
-
-        Collections.sort(lista);
 
     }
 }

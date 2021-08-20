@@ -37,7 +37,7 @@ public abstract class Produto implements IProduto, Comparable{
         this.preco = preco;
     }
 
-    public int compareTO(Object o){
+    public int compareTo(Object o){
         Produto outra = (Produto) o;
         if (this.codigo < outra.getCodigo()){
             return -1;
@@ -47,8 +47,5 @@ public abstract class Produto implements IProduto, Comparable{
         }
         return 1;
         }
-
-
-
 
 }
